@@ -1,0 +1,104 @@
+intents:
+- ask_place
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- stop
+- thankyou
+- ask_tea:
+    use_entities: []
+- chitchat:
+    use_entities: []
+- inform
+entities:
+- place
+- number
+- sweetness
+- size
+- bubble
+- name
+slots:
+  bubble:
+    type: unfeaturized
+  name:
+    type: unfeaturized
+  number:
+    type: unfeaturized
+  place:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+  size:
+    type: unfeaturized
+  sweetness:
+    type: unfeaturized
+templates:
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 每日一笑：
+  utter_did_that_help:
+  - text: 对你有帮助吗
+  utter_goodbye:
+  - text: 再见
+  utter_greet:
+  - text: ｈｉ！你好
+  utter_happy:
+  - text: 太棒了！
+  utter_ask_name:
+  - text: 请问您需要什么奶茶？本店提供珍珠奶茶，椰果奶茶，皇家奶茶和热可可．
+  utter_ask_number:
+  - text: 要几杯？
+  utter_ask_sweetness:
+  - text: 几分甜度？
+  utter_ask_size:
+  - text: 大杯小杯中杯？
+  utter_ask_bubble:
+  - text: 要不要珍珠？
+  utter_wrong_name:
+  - text: 对不起，没有你说的奶茶
+  utter_wrong_sweetness:
+  - text: 对不起没有这种甜度
+  utter_wrong_size:
+  - text: 对不起，没有这种大小的杯子
+  utter_wrong_bubble:
+  - text: 对不起没有你要的那种珍珠哦
+  utter_default:
+  - text: 对不起，我还不能懂你在说什么
+  utter_submit:
+  - text: 订单完成，请耐心等待
+  utter_chitchat:
+  - text: chitchat
+  utter_slots_values:
+  - text: "请您核实以下内容：\n - 名字: {name}\n - 大小: {size}\n - 甜度: {sweetness}\n - 珍珠: {bubble}\n\
+      \ - 数量: {number}"
+  utter_noworries:
+  - text: 谢谢惠顾
+  utter_stop:
+  - text: 谢谢惠顾
+actions:
+- action_ask_place
+- utter_cheer_up
+- utter_did_that_help
+- utter_goodbye
+- utter_greet
+- utter_happy
+- utter_chitchat
+- utter_slots_values
+- utter_submit
+- utter_default
+- utter_wrong_bubble
+- utter_wrong_size
+- utter_wrong_sweetness
+- utter_wrong_tea
+- utter_ask_bubble
+- utter_ask_size
+- utter_ask_sweetness
+- utter_ask_number
+- utter_ask_name
+- utter_noworries
+- utter_stop
+forms:
+- tea_form
